@@ -1,26 +1,26 @@
 # Kai&Nova Demo Preview
 
-This folder hosts the static landing page you can deploy to Vercel or any static host. It reads directly from `preview/index.html` and visualizes the key capabilities of your repository.
+This folder is your production-ready landing page. It now features an animated hero, tabbed overview of every repo capability, automation timelines, trails, and social links (Twitter + GitHub). Deploy it to Vercel or host it anywhere static.
 
-## Deployment instructions
+## Deploy to Vercel
 
-1. Run `git push` so this folder is available on GitHub.
-2. Import the repo into Vercel and set the Root Directory to `preview/`.
-3. Optionally create environment variables such as `NEXT_PUBLIC_KAI_NOVA_TAG` to customize the hero text.
-4. Trigger a Vercel deployment — the build step is just `vercel build` and the output is the static HTML/CSS you see here.
+1. Import the repo into Vercel.
+2. Set the root directory to `preview/` so it serves this page exactly.
+3. (Optional) Define `NEXT_PUBLIC_KAI_NOVA_TAG` to customize the hero subtitle.
+4. Trigger a production deploy. Once live, `https://kai-nova-the-twin-sisters.vercel.app` will render this UI.
 
-Want to preview locally?
+## Local preview
 
 ```bash
 npx serve preview
-you can also run: python3 -m http.server --directory preview 4190
+# or
+python3 -m http.server --directory preview 4190
 ```
 
-## What the page highlights
+## Tabs
 
-- Hero + CTA pointing back to the main README for setup instructions.
-- Feature cards describing automation, powers, and multi-LLM readiness.
-- Automation scripts section showing how to wire `deploy-openclaw.sh` and `hermes-watch-repo.sh`.
-- Pipeline section that mirrors Hermes/ClawTeam operations so visitors see how commits trigger openclaw deployments.
-
-Build more sections if you want to demo other pipelines (Droyd, OmniRoute, Observability). Once Vercel publishes, share the preview URL with teammates and showcase the Kai&Nova twins before the Telegram launch.
+- **Overview** — stacks the README narrative (Node, Telegram, LLM provider agnostic).
+- **Automation & OpenClaw** — describes the deploy scripts, Hermes, OmniRoute, and trails.
+- **Powers & Trails** — spells out each power plus observability + memory search.
+- **Demos** — lists deployment commands and the sync pipeline cards.
+- **Socials** — shows Twitter & GitHub links plus sponsor credits.
