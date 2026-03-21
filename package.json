@@ -1,0 +1,21 @@
+{
+  "name": "kai-nova-the-twin-sisters",
+  "version": "0.1.0",
+  "description": "Kai&Nova The Twin Sisters - twin autonomous founders with memory, goals, and initiative",
+  "main": "src/kai-nova.js",
+  "scripts": {
+    "setup": "node setup.js",
+    "start": "node src/kai-nova.js",
+    "install-pm2": "pm2 start ecosystem.config.js",
+    "stop": "pm2 stop kai-nova-the-twin-sisters",
+    "logs": "pm2 logs kai-nova-the-twin-sisters"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.30.0",
+    "dotenv": "^16.0.0",
+    "openai": "^4.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
