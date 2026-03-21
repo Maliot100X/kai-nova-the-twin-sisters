@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kai&Nova Demo Preview</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="grid">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">Kai&Nova · Autonomous twin founders</p>
+        <h1>We act in code, conversation, and consequence.</h1>
+        <p class="lede">
+          Kai&Nova The Twin Sisters keep a live memory, pursue goals with initiative, fetch powers, and talk through Telegram while Hermes watches the gateway.
+        </p>
+        <div class="cta-row">
+          <a class="btn primary" href="../README.md">Read the playbook</a>
+          <a class="btn ghost" href="../preview/README.md">Deploy the demo</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <p class="hero-card-title">Live Snapshot</p>
+        <p class="hero-value">STUDIO MODE</p>
+        <div class="hero-grid">
+          <div>
+            <span>Goals</span>
+            <strong>Earn first dollar</strong>
+          </div>
+          <div>
+            <span>Powers</span>
+            <strong>web-search, observability</strong>
+          </div>
+          <div>
+            <span>Channel</span>
+            <strong>Telegram + Hermes</strong>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="section-heading">
+        <h2>Core Demo Highlights</h2>
+        <p>Deploy this folder to Vercel as a static site and share the Kai&Nova story with a glowing UI.</p>
+      </div>
+      <div class="cards">
+        <article>
+          <h3>Live telemetry</h3>
+          <p>Data streams from `workspace/.jork` plus `jork.log` and Hermes watchers keep every action traceable.</p>
+        </article>
+        <article>
+          <h3>Automation suite</h3>
+          <p>Scripts `scripts/deploy-openclaw.sh` and `scripts/hermes-watch-repo.sh` push commits into OpenClaw automatically.</p>
+        </article>
+        <article>
+          <h3>Powers & insights</h3>
+          <p>Built-in `powers/observability`, `web-search`, `web-fetch`, `memory-search` illustrate how Kai&Nova extend themselves.</p>
+        </article>
+        <article>
+          <h3>Multi-LLM ready</h3>
+          <p>Switch between Claude CLI, Anthropic, OpenAI, Xiaomi MiMo or other OpenAI-like endpoints by editing `.env`.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section slate">
+      <div>
+        <h2>Deploy the preview</h2>
+        <ol>
+          <li>Point Vercel's root directory to <code>preview/</code> when importing the repo.</li>
+          <li>Set an environment variable `NEXT_PUBLIC_KAI_NOVA_TAG` (optional) to customize the hero tagline.</li>
+          <li>The static HTML + CSS run on Vercel without build steps.</li>
+        </ol>
+        <p class="tiny">Example Vercel CLI command: <code>vercel --prod --root preview/ --name kai-nova-demo</code></p>
+      </div>
+      <div class="preview-stats">
+        <div>
+          <span>Framework</span>
+          <strong>Static HTML + CSS</strong>
+        </div>
+        <div>
+          <span>Deploy</span>
+          <strong>Vercel / Netlify / any static host</strong>
+        </div>
+        <div>
+          <span>Preview link</span>
+          <strong>https://kai-nova-the-twin-sisters.vercel.app</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Auto-sync pipeline</h2>
+      <div class="pipeline">
+        <div>
+          <strong>1</strong>
+          <p>Watch repo via `scripts/hermes-watch-repo.sh`.</p>
+        </div>
+        <div>
+          <strong>2</strong>
+          <p>Change detected → run `scripts/deploy-openclaw.sh`.</p>
+        </div>
+        <div>
+          <strong>3</strong>
+          <p>Hermes announces deployment to OpenClaw + logs to `jork.log`.</p>
+        </div>
+        <div>
+          <strong>4</strong>
+          <p>Observability power collects the telemetry note for Kai&Nova.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div>
+        <h3>Ready for lift-off</h3>
+        <p>Push this folder, connect Hermes & OpenClaw, and share the preview URL with your team.</p>
+      </div>
+      <div class="footer-cta">
+        <a class="btn primary" href="../preview/README.md">Preview deployment</a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

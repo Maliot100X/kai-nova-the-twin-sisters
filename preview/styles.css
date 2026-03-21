@@ -1,0 +1,242 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Space Grotesk', 'Inter', sans-serif;
+  background: #03040a;
+  color: #f3f3f7;
+  min-height: 100vh;
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 3rem clamp(1rem, 3vw, 4rem) 4rem;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  align-items: center;
+}
+
+.eyebrow {
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  color: #a5f9ea;
+}
+
+.hero h1 {
+  font-size: clamp(2.4rem, 4vw, 3.5rem);
+  margin: 0.8rem 0;
+  line-height: 1.1;
+}
+
+.lede {
+  max-width: 40rem;
+  color: #cfd5ff;
+}
+
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.btn {
+  border-radius: 999px;
+  padding: 0.85rem 1.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: transform 0.2s ease;
+}
+
+.btn.primary {
+  background: linear-gradient(135deg, #00ffc4, #7f5af0);
+  color: #03040a;
+}
+
+.btn.ghost {
+  border: 1px solid #7f5af0;
+  color: #f3f3f7;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.hero-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.65);
+}
+
+.hero-card-title {
+  text-transform: uppercase;
+  letter-spacing: 0.4em;
+  font-size: 0.7rem;
+  color: #8d94ff;
+}
+
+.hero-value {
+  font-size: 1.4rem;
+  margin: 1rem 0 1.2rem;
+  color: #fff;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.hero-grid div span {
+  font-size: 0.75rem;
+  color: #8c9afc;
+}
+
+.hero-grid div strong {
+  display: block;
+  margin-top: 0.3rem;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+
+.section-heading h2 {
+  font-size: 2rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.cards article {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  min-height: 160px;
+}
+
+.cards h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.slate {
+  background: radial-gradient(circle at top right, rgba(0, 255, 196, 0.15), transparent 40%), rgba(3, 4, 10, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.slate h2 {
+  font-size: 1.8rem;
+}
+
+.preview-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+}
+
+.preview-stats div {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 0.8rem;
+  padding: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.preview-stats span {
+  font-size: 0.75rem;
+  color: #8a92ff;
+}
+
+.preview-stats strong {
+  display: block;
+  margin-top: 0.4rem;
+}
+
+.pipeline {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+}
+
+.pipeline div {
+  background: rgba(255, 255, 255, 0.02);
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  min-height: 120px;
+}
+
+.pipeline strong {
+  font-size: 1.4rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-cta {
+  display: flex;
+  gap: 1rem;
+}
+
+.tiny {
+  font-size: 0.8rem;
+  color: #a7a9c1;
+  margin-top: 0.6rem;
+}
+
+code {
+  background: rgba(255, 255, 255, 0.04);
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.4rem;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 720px) {
+  .cta-row {
+    flex-direction: column;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

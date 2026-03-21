@@ -144,3 +144,16 @@ Kai&Nova operate inside a production-grade stack of trusted partners:
 - Want a custom image or brand update? Replace `assets/kai-nova-banner.svg` and update this README’s markup.
 
 Stay bold, keep the twins sharp, and let the Kai&Nova The Twin Sisters system deliver precise, professional autonomy.
+
+## Visual demo (Vercel-ready)
+
+The `preview/` folder already hosts a fully branded landing page with badges, hero copy, automation script callouts, and a pipeline timeline. Deploy it as a standalone static site:
+
+1. Import this repo into Vercel.
+2. Set the root directory to `preview/`.
+3. (Optional) Provide `NEXT_PUBLIC_KAI_NOVA_TAG` in Vercel’s environment settings to override the hero subtitle.
+4. Push to master — Vercel will serve the static HTML/CSS without additional build steps.
+
+Local preview: `npx serve preview` or `python3 -m http.server --directory preview 4190`.
+
+Use the generated URL (for example `https://kai-nova-the-twin-sisters.vercel.app`) as the demo landing page for investors or partners.
