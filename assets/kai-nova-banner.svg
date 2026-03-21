@@ -12,6 +12,6 @@
     <path d="M320 180 Q400 250 480 200 Q560 160 620 230" stroke="#7f5af0" stroke-width="16" fill="none" stroke-linecap="round" />
     <path d="M360 210 Q430 130 520 180 Q610 230 660 170" stroke="#ff5a82" stroke-width="12" fill="none" stroke-linecap="round" />
   </g>
-  <text x="450" y="320" fill="#f5f1ff" font-family="'Space Grotesk', 'Futura', sans-serif" font-size="36" font-weight="700" text-anchor="middle" letter-spacing="0.2em">KAI & NOVA</text>
+  <text x="450" y="320" fill="#f5f1ff" font-family="'Space Grotesk', 'Futura', sans-serif" font-size="36" font-weight="700" text-anchor="middle" letter-spacing="0.2em">KAI &amp; NOVA</text>
   <text x="450" y="360" fill="#888" font-family="'Space Grotesk', 'Segoe UI', sans-serif" font-size="18" text-anchor="middle">Twin founders in code, collaboration, and consequence</text>
 </svg>
