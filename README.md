@@ -1,6 +1,4 @@
-<p align="center">
-  <img src="assets/kai-nova-banner.svg" alt="Kai&Nova The Twin Sisters banner" width="780" />
-</p>
+![Kai&Nova banner](assets/kai-nova-banner.svg)
 
 # Kai&Nova The Twin Sisters
 
@@ -25,10 +23,10 @@ Kai&Nova are autonomous twin founders. They run their own intelligence stack ins
 
 1. **Telegram user ID** — message [@userinfobot](https://t.me/userinfobot) and copy the numeric ID. This tells Kai&Nova where to send updates.  
 2. **Telegram bot token** — talk to [@BotFather](https://t.me/BotFather), issue `/newbot`, pick a name/username, and keep the token (format `123456:ABC...`).  
-3. **Choose your LLM** — select whichever feeds your twins best:
-   - **Claude Code CLI:** install from https://claude.ai/code, run `claude login`, and no API key is needed. Full tool access is unlocked.
-   - **Anthropic API:** visit https://console.anthropic.com, grab a key, and optionally override `ANTHROPIC_MODEL` with `claude-sonnet-4-6` or similar.
-   - **OpenAI or OpenAI-compatible endpoint:** supply `LLM_BASE_URL`, `LLM_MODEL`, and `LLM_API_KEY`. This lets you use OpenAI, DeepSeek, Groq, Together, Xiaomi MiMo, or any other provider that follows the OpenAI contract.
+3. **Choose your LLM** — Kai&Nova accept any provider that mirrors the OpenAI contract, so you can swap in Claude Code, Anthropic, OpenAI, Xiaomi MiMo, or another service without code changes. Configure:
+   - `LLM_PROVIDER` to `claude-cli`, `anthropic`, `openai`, `zhipu`, or `custom`.
+   - `LLM_BASE_URL` / `LLM_MODEL` / `LLM_API_KEY` to match your endpoint.
+   - Optionally override `ANTHROPIC_MODEL` for Claude models or set `LLM_EXTRA_HEADERS` via your deployment layer when you need secrets.
 
 ## Environment variables
 
@@ -89,8 +87,18 @@ Kai&Nova operate inside a production-grade stack of trusted partners:
 
 1. **OpenClaw / ClawTeam prod-team** — connects multiple agents, routes tasks, and archives mission telemetry so Kai&Nova stay synchronized with Hermes and OpenClaw swarms.
 2. **OmniRoute** — secure, low-latency model routing that ensures Kai&Nova reach Claude, OpenAI, or other LLMs without exposing secrets.
-3. **OpenAI / Anthropic / Claude Code** — the LLM layer; choose the provider that matches your token budget and tooling preferences.
+3. **OpenAI / Anthropic / Claude Code** — the LLM layer; choose the provider that matches your token budget and tooling preferences. Kai&Nova can speak to any OpenAI-compatible endpoint (DeepSeek, Groq, Together, Xiaomi MiMo, custom API key) via the same config.
 4. **Xiaomi MiMo API & Hermes** — optional; plug-in via OpenClaw’s connectors for custom billing-sensitive deployments if desired.
+
+### Sponsor profiles on GitHub
+
+| Sponsor | Role | GitHub profile |
+| --- | --- | --- |
+| OpenClaw / ClawTeam prod-team | Multi-agent orchestration, gateway monitoring, and tooling for the twins. | https://github.com/ClawTeam |
+| OmniRoute | Model routing, inference orchestration, and infrastructure that keeps Kai&Nova connected to LLM providers. | https://github.com/omniroute |
+| OpenAI | General-purpose LLM provider with GPT models. | https://github.com/openai/sponsors |
+| Anthropic / Claude Code | Claude CLI and Anthropic API access, with in-depth tool-use when Claude Code CLI is selected. | https://github.com/Anthropic/anthropic |
+| Hermes / Xiaomi MiMo | Hermes automation + Xiaomi MiMo API integration, optimized for billing-sensitive deployments. | https://github.com/Maliot100X |
 
 ## Professional notes
 
