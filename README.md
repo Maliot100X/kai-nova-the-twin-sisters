@@ -83,6 +83,15 @@ Kai&Nova were born inside the ClawTeam / OpenClaw prod-team stack, so they alrea
 
 These steps keep Kai&Nova visible to your autopilot pipelines and maintain the professional telemetry pipeline you asked for.
 
+## Automation scripts
+
+Kai&Nova ship with helper scripts to deploy automatically and keep Hermes in sync:
+
+1. `scripts/deploy-openclaw.sh` — call this after every release to forward the latest commit info to OpenClaw via `hermes openclaw run`. It reads `OPENCLAW_GATEWAY_TOKEN` and optional `OPENCLAW_MISSION_NAME`, so load your `.env` before running (Hermes CLI must be installed on the runner).
+2. `scripts/hermes-watch-repo.sh` — keeps an eye on key directories (`README.md`, `scripts`, `src`, `powers`) using `inotifywait`. When it sees a change, it automatically calls the deploy script and logs the outcome. Perfect for keeping Hermes aware of quick edits without manual intervention.
+
+Set `OPENCLAW_GATEWAY_TOKEN` / `OPENCLAW_MISSION_NAME` inside `.env` or your deployment shell before using those helpers. Your OpenClaw automation can run these via tmux or systemd so deployments stay on autopilot.
+
 ## Kai&Nova powers
 
 `powers/INDEX.md` describes the tools available to them. They fetch this index on startup (defaults to the `powers/` directory in this repo). When you add a new power, follow the structure:
@@ -96,6 +105,10 @@ powers/
 ```
 
 Kai&Nova load each README and can execute bash/python helpers via their agent loop. Store notes or query files in `workspace/powers/[power]/` for them to read.
+
+### Observability power
+
+`powers/observability/collect.sh` grabs the most recent `jork.log` tail plus any available `pm2` status and writes the results to `workspace/powers/observability/output.txt`. Kai&Nova read this file in their next cycle when you request a stability report.
 
 ## Sponsors & partners
 
