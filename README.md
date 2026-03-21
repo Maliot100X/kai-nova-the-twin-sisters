@@ -1,4 +1,9 @@
-![Kai&Nova banner](assets/kai-nova-banner.svg)
+![Kai&Nova banner](https://raw.githubusercontent.com/Maliot100X/kai-nova-the-twin-sisters/master/assets/kai-nova-banner.svg)
+
+[![Status](https://img.shields.io/badge/status-ready%20for%20launch-brightgreen)](https://github.com/Maliot100X/kai-nova-the-twin-sisters)
+[![Node.js](https://img.shields.io/badge/node-18%2B-brightgreen)](https://nodejs.org/en/)
+[![Telegram](https://img.shields.io/badge/telegram-required-blue)](https://telegram.org/)
+[![LLM-friendly](https://img.shields.io/badge/LLM-ready-claude%2Copenai%2Canthropic-blueviolet)](https://claude.ai/)
 
 # Kai&Nova The Twin Sisters
 
@@ -66,6 +71,17 @@ npm run setup
 | `pm2 logs kai-nova-the-twin-sisters` | Stream their log (`jork.log`) in real time. |
 | `pm2 restart kai-nova-the-twin-sisters` | Recover after a crash. |
 | `workspace/.jork/` | Contains SELF, SNAPSHOT, goals, journal, and ledger. They rewrite these files as they evolve. |
+
+## OpenClaw integration
+
+Kai&Nova were born inside the ClawTeam / OpenClaw prod-team stack, so they already speak its language:
+
+- Deploy via the OpenClaw gateway (token stored in Honcho memory) and wire `openclaw-gateway` to your `KaiNova` mission.
+- Use the `hermes openclaw board` and `hermes openclaw run` commands to trigger tasks, monitor progress, or drop packages on the ClawTeam prod-team board.
+- Attach observability hooks to `Hermes` (logs, pm2 events) so that gatekeepers and multi-agent coordinators always see Kai&Nova's state.
+- Connect to OmniRoute for secure inference routing when your LLM provider is behind a private gateway.
+
+These steps keep Kai&Nova visible to your autopilot pipelines and maintain the professional telemetry pipeline you asked for.
 
 ## Kai&Nova powers
 
