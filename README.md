@@ -145,6 +145,27 @@ Kai&Nova operate inside a production-grade stack of trusted partners:
 
 Stay bold, keep the twins sharp, and let the Kai&Nova The Twin Sisters system deliver precise, professional autonomy.
 
+## 1→1000 Project story (terminal + OpenClaw ready)
+
+1. **What the project is** — `src/kai-nova.js` drives the life loop: it builds context from `workspace/.jork`, polls Telegram/OmniRoute, thinks autonomously, executes powers, writes logs to `jork.log`, and keeps `SELF.md`, `SNAPSHOT.md`, `goals.json`, and `LEDGER.md` updated.
+2. **How it mirrors the README** — `setup.js` + `.env.example` configure Telegram secrets and LLM providers (Claude CLI, OpenAI-compatible, Xiaomi MiMo, Anthropic); `scripts/` contains `deploy-openclaw.sh` and `hermes-watch-repo.sh`; `powers/` hosts web-search, web-fetch, memory-search, and observability helpers.
+3. **OpenClaw integration (cd + skill)** — drop the repo into the gateway and run:
+
+   ```bash
+   cd /root/kai-nova-the-twin-sisters
+   ./scripts/deploy-openclaw.sh
+   ```
+
+   `deploy-openclaw.sh` reads `OPENCLAW_GATEWAY_TOKEN`/`OPENCLAW_MISSION_NAME`, evaluates the current commit, and triggers `hermes openclaw run`. Keep Hermes installed in the environment and provide the gateway token via `.env` or skill metadata.
+4. **Automation watch** — `scripts/hermes-watch-repo.sh` monitors `README.md`, `scripts/`, `src/`, and `powers/` using `inotifywait`; any change automatically reruns `deploy-openclaw.sh` so OpenClaw always reflects the latest agents.
+5. **What OpenClaw users need** — clone the repo, `cd` into it, then:
+   - `npm install`
+   - Copy `.env.example` to `.env` and fill `TELEGRAM_BOT_TOKEN`, `TELEGRAM_CHAT_ID`, `LLM_PROVIDER`, `LLM_BASE_URL`, `LLM_MODEL`, `LLM_API_KEY`, `OPENCLAW_GATEWAY_TOKEN`, `OPENCLAW_MISSION_NAME`, and (optionally) `KAI_NOVA_POWERS_BASE`.
+   - Start with `npm run setup` (or `node src/kai-nova.js`). When ready, run `./scripts/deploy-openclaw.sh` or hand this repo to OpenClaw via a `skill.md` that runs that script.
+6. **Open Claw + OmniRoute** — if your gateway already hosts an LLM session (Claude CLI, OpenAI, Xiaomi MiMo, etc.), Kai&Nova route through OmniRoute automatically and log telemetry in `jork.log`/PM2. Keep `workspace/.jork` synced so the twins never lose their trail.
+
+Use this README path as your `skill.md` manifest: provide the git clone link, run `npm install`, fill `.env`, and execute `./scripts/deploy-openclaw.sh`. That’s all OpenClaw needs to spin the project from the gateway to Hermes back to Telegram.
+
 ## Visual demo (Vercel-ready)
 
 The `preview/` folder already hosts a fully branded landing page with badges, hero copy, automation script callouts, and a pipeline timeline. Deploy it as a standalone static site:
